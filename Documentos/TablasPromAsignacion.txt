@@ -1,0 +1,377 @@
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_TipoNombramiento
+	(
+	ID_TipoNombramiento int NOT NULL IDENTITY (1, 1),
+	Descripcion varchar(50) NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_TipoNombramiento ADD CONSTRAINT
+	PK_tbc_CND_TipoNombramiento PRIMARY KEY CLUSTERED 
+	(
+	ID_TipoNombramiento
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbc_CND_TipoNombramiento SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_TipoCategoria
+	(
+	ID_TipoCategoria int NOT NULL IDENTITY (1, 1),
+	Descripcion varchar(50) NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_TipoCategoria ADD CONSTRAINT
+	PK_tbc_CND_TipoCategoria PRIMARY KEY CLUSTERED 
+	(
+	ID_TipoCategoria
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbc_CND_TipoCategoria SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_VigenciaAdscripcion
+	(
+	ID_VigenciaAdscripcion int NOT NULL IDENTITY (1, 1),
+	Descripcion varchar(50) NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_VigenciaAdscripcion ADD CONSTRAINT
+	PK_tbc_CND_VigenciaAdscripcion PRIMARY KEY CLUSTERED 
+	(
+	ID_VigenciaAdscripcion
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbc_CND_VigenciaAdscripcion SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_TipoVacante
+	(
+	ID_TipoVacante int NOT NULL IDENTITY (1, 1),
+	Descripcion varchar(50) NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_TipoVacante ADD CONSTRAINT
+	PK_tbc_CND_TipoVacante PRIMARY KEY CLUSTERED 
+	(
+	ID_TipoVacante
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbc_CND_TipoVacante SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_TipoPlaza
+	(
+	ID_TipoPlaza int NOT NULL IDENTITY (1, 1),
+	Descripcion varchar(50) NOT NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_TipoPlaza ADD CONSTRAINT
+	PK_tbc_CND_TipoPlaza PRIMARY KEY CLUSTERED 
+	(
+	ID_TipoPlaza
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbc_CND_TipoPlaza SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_DenominacionPlaza
+	(
+	ID_DenominacionPlaza int NOT NULL IDENTITY (1, 1),
+	Descripcion varchar(50) NOT NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_DenominacionPlaza ADD CONSTRAINT
+	PK_tbc_CND_DenominacionPlaza PRIMARY KEY CLUSTERED 
+	(
+	ID_DenominacionPlaza
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbc_CND_DenominacionPlaza SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbd_CND_AsignacionRegistroAntecedentes
+	(
+	ID_Antecedente int NOT NULL IDENTITY (1, 1),
+	pkResultados int NULL,
+	ClaveEntidad int NULL,
+	CURP varchar(25) NULL,
+	CCT varchar(20) NULL,
+	NombreCCT varchar(200) NULL,
+	ID_TipoPlaza int NULL,
+	NumHoras int NULL,
+	ID_TipoCategoria int NULL,
+	ID_DenominacionPlaza int NULL,
+	ClavePresupuestal varchar(20) NULL,
+	idNivelCarrera int NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbd_CND_AsignacionRegistroAntecedentes ADD CONSTRAINT
+	PK_tbd_CND_AsignacionRegistroAntecedentes PRIMARY KEY CLUSTERED 
+	(
+	ID_Antecedente
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbd_CND_AsignacionRegistroAntecedentes ADD CONSTRAINT
+	FK_tbd_CND_AsignacionRegistroAntecedentes_tbc_CND_TipoPlaza FOREIGN KEY
+	(
+	ID_TipoPlaza
+	) REFERENCES dbo.tbc_CND_TipoPlaza
+	(
+	ID_TipoPlaza
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbd_CND_AsignacionRegistroAntecedentes ADD CONSTRAINT
+	FK_tbd_CND_AsignacionRegistroAntecedentes_tbc_CND_DenominacionPlaza FOREIGN KEY
+	(
+	ID_DenominacionPlaza
+	) REFERENCES dbo.tbc_CND_DenominacionPlaza
+	(
+	ID_DenominacionPlaza
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbd_CND_AsignacionRegistroAntecedentes ADD CONSTRAINT
+	FK_tbd_CND_AsignacionRegistroAntecedentes_tbc_CND_TipoCategoria FOREIGN KEY
+	(
+	ID_TipoCategoria
+	) REFERENCES dbo.tbc_CND_TipoCategoria
+	(
+	ID_TipoCategoria
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbd_CND_AsignacionRegistroAntecedentes SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_AntecedentesFuncion
+	(
+	ID_FuncionActual int NOT NULL IDENTITY (1, 1),
+	Descripcion varchar(50) NOT NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_AntecedentesFuncion ADD CONSTRAINT
+	PK_tbc_CND_AntecedentesFuncion PRIMARY KEY CLUSTERED 
+	(
+	ID_FuncionActual
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbc_CND_AntecedentesFuncion SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbd_CND_Docentes_Nuevos
+	(
+	ID_Antecedente int NOT NULL IDENTITY (1, 1),
+	RFC varchar(20) NULL,
+	CURP varchar(25) NULL,
+	Nombre varchar(200) NULL,
+	ApellidoPaterno varchar(200) NULL,
+	ApellidoMaterno varchar(200) NULL,
+	Domicilio varchar(500) NULL,
+	TelefonoLocal varchar(20) NULL,
+	TelefonoCelular varchar(20) NULL,
+	CorreoElectronico varchar(50) NULL,
+	ID_FuncionActual int NULL,
+	CumplePerfil bit NULL,
+	CCT varchar(20) NULL,
+	NombreCCT varchar(200) NULL,
+	ClaveDeTurno int NULL,
+	ID_VigenciaAdscripcion int NULL,
+	Fecha_Inicio datetime NULL,
+	Fecha_Fin datetime NULL,
+	ID_TipoVacante int NULL,
+	ID_TipoCategoria int NULL,
+	ClavePresupuestal varchar(20) NULL,
+	FechaAsignacion datetime NULL,
+	ClaveEntidad_OrigenDocente int NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbd_CND_Docentes_Nuevos ADD CONSTRAINT
+	PK_tbd_CND_Docentes_Nuevos PRIMARY KEY CLUSTERED 
+	(
+	ID_Antecedente
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.tbd_CND_Docentes_Nuevos ADD CONSTRAINT
+	FK_tbd_CND_Docentes_Nuevos_tbc_CND_AntecedentesFuncion FOREIGN KEY
+	(
+	ID_FuncionActual
+	) REFERENCES dbo.tbc_CND_AntecedentesFuncion
+	(
+	ID_FuncionActual
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbd_CND_Docentes_Nuevos ADD CONSTRAINT
+	FK_tbd_CND_Docentes_Nuevos_tbc_CND_VigenciaAdscripcion FOREIGN KEY
+	(
+	ID_VigenciaAdscripcion
+	) REFERENCES dbo.tbc_CND_VigenciaAdscripcion
+	(
+	ID_VigenciaAdscripcion
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbd_CND_Docentes_Nuevos ADD CONSTRAINT
+	FK_tbd_CND_Docentes_Nuevos_tbc_CND_TipoVacante FOREIGN KEY
+	(
+	ID_TipoVacante
+	) REFERENCES dbo.tbc_CND_TipoVacante
+	(
+	ID_TipoVacante
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbd_CND_Docentes_Nuevos ADD CONSTRAINT
+	FK_tbd_CND_Docentes_Nuevos_tbc_CND_TipoCategoria FOREIGN KEY
+	(
+	ID_TipoCategoria
+	) REFERENCES dbo.tbc_CND_TipoCategoria
+	(
+	ID_TipoCategoria
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbd_CND_Docentes_Nuevos SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.tbc_CND_DenominacionPlaza_TipoCategoria
+	(
+	ID_DenominacionPlaza int NOT NULL,
+	ID_FuncionActual int NOT NULL,
+	Activo bit NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.tbc_CND_DenominacionPlaza_TipoCategoria ADD CONSTRAINT
+	FK_tbc_CND_DenominacionPlaza_TipoCategoria_tbc_CND_DenominacionPlaza FOREIGN KEY
+	(
+	ID_DenominacionPlaza
+	) REFERENCES dbo.tbc_CND_DenominacionPlaza
+	(
+	ID_DenominacionPlaza
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbc_CND_DenominacionPlaza_TipoCategoria ADD CONSTRAINT
+	FK_tbc_CND_DenominacionPlaza_TipoCategoria_tbc_CND_AntecedentesFuncion FOREIGN KEY
+	(
+	ID_FuncionActual
+	) REFERENCES dbo.tbc_CND_AntecedentesFuncion
+	(
+	ID_FuncionActual
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.tbc_CND_DenominacionPlaza_TipoCategoria SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[tbd_CND_AsignacionDetalle]    Script Date: 09/02/2015 20:37:38 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[tbd_CND_AsignacionDetalle](
+	[ID_AsignacionDetalle] [int] IDENTITY(1,1) NOT NULL,
+	[pkResultados] [int] NOT NULL,
+	[FolioFederal] [varchar](20) NULL,
+	[CCT] [varchar](255) NULL,
+	[NombreCCT] [varchar](255) NULL,
+	[ClaveDeTurno] [int] NULL,
+	[ID_VigenciaAdscripcion] [int] NULL,
+	[Fecha_Inicio] [datetime] NULL,
+	[Fecha_Fin] [datetime] NULL,
+	[ID_TipoVacante] [int] NULL,
+	[ID_TipoNombramiento] [int] NULL,
+	[ID_TipoCategoria] [int] NULL,
+	[Funcion] [varchar](250) NULL,
+	[TipoEvaluacion] [varchar](100) NULL,
+	[ClaveNivelEducativo] [int] NULL,
+	[ClaveNivelEducativoServico] [int] NULL,
+	[ClaveEntidad] [int] NULL,
+	[TipoSostenimiento] [varchar](20) NULL,
+	[ClavePresupuestal] [varchar](100) NULL,
+	[FechaAsignacion] [datetime] NULL,
+	[ClaveEntidad_OrigenDocente] [int] NULL,
+	[AproboEvaluacionInduccion] [bit] NULL,
+	[FechaRegistro] [datetime] NULL,
+	[UsuarioRegistro] [varchar](50) NULL,
+	[ClaveEstatusAsignacion] [int] NULL,
+	[ID_MotivoRechazo] [int] NULL,
+ CONSTRAINT [PK_tbd_CND_AsignacionDetalle_Asignacion] PRIMARY KEY CLUSTERED 
+(
+	[ID_AsignacionDetalle] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[tbd_CND_AsignacionDetalle] ADD  CONSTRAINT [DF_tbd_CND_AsignacionDetalle_AproboEvaluacionInduccion]  DEFAULT ((0)) FOR [AproboEvaluacionInduccion]
+GO
+
+ALTER TABLE [dbo].[tbd_CND_AsignacionDetalle] ADD  CONSTRAINT [DF_tbd_CND_AsignacionDetalle_FechaRegistro]  DEFAULT (getdate()) FOR [FechaRegistro]
+GO
+
+
+
+
+
+
+COMMIT

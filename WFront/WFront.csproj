@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55502FEC-C812-40DB-99E5-77DD4875271B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WFront</RootNamespace>
+    <AssemblyName>WFront</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ajaxcontroltoolkit">
+      <HintPath>..\..\..\Administracion15\Admin.Web\Bin\ajaxcontroltoolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Asignacion\Images\aceptar-hover.png" />
+    <Content Include="App_Themes\Asignacion\Images\aceptar.png" />
+    <Content Include="App_Themes\Asignacion\Images\btn01.png" />
+    <Content Include="App_Themes\Asignacion\Images\Calendar.png" />
+    <Content Include="App_Themes\Asignacion\Images\cargando.gif" />
+    <Content Include="App_Themes\Asignacion\Images\Editar.png" />
+    <Content Include="App_Themes\Asignacion\Images\footer.png" />
+    <Content Include="App_Themes\Asignacion\Images\HeaderPrincipal.png" />
+    <Content Include="App_Themes\Asignacion\Images\HeaderPrincipalAjax.png" />
+    <Content Include="App_Themes\Asignacion\Images\LogoExplorer20x20.jpg" />
+    <Content Include="App_Themes\Asignacion\Images\no_OK.png" />
+    <Content Include="App_Themes\Asignacion\Images\OK.png" />
+    <Content Include="App_Themes\Asignacion\Images\rechazar-hover.png" />
+    <Content Include="App_Themes\Asignacion\Images\rechazar.png" />
+    <Content Include="App_Themes\Asignacion\Images\WaitCursor.gif" />
+    <Content Include="App_Themes\Asignacion\Scripts\Actualizando.js" />
+    <Content Include="App_Themes\Asignacion\Scripts\jquery-1.8.1.min.js" />
+    <Content Include="App_Themes\Asignacion\Style\Asignacion 2013.css" />
+    <Content Include="App_Themes\Asignacion\Style\Asignacion 2014.css" />
+    <Content Include="App_Themes\Asignacion\Style\Tab_Container.css" />
+    <Content Include="Asignacion\AgregarRegistro.aspx" />
+    <Content Include="Asignacion\Asignar.aspx" />
+    <Content Include="Asignacion\AsignarListado.aspx" />
+    <Content Include="Asignacion\EditarAsignacion.aspx" />
+    <Content Include="Asignacion\Firmas.aspx" />
+    <Content Include="Asignacion\PlazaAntecedente.aspx" />
+    <Content Include="Controles\Cat_TipoNombramiento.aspx" />
+    <Content Include="Configuracion\Configuracion.aspx" />
+    <Content Include="Controles\wucFiltros.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="fallback\grd_alt.png" />
+    <Content Include="fallback\grd_head.png" />
+    <Content Include="fallback\grd_pgr.png" />
+    <Content Include="fallback\indicator.png" />
+    <Content Include="fallback\logo.gif" />
+    <Content Include="fallback\LogoFooter.png" />
+    <Content Include="fallback\Nav.png" />
+    <Content Include="fallback\navBG.gif" />
+    <Content Include="fallback\navLeft.gif" />
+    <Content Include="fallback\navLeftIE.gif" />
+    <Content Include="fallback\navOverBG.gif" />
+    <Content Include="fallback\navOverBG2.gif" />
+    <Content Include="fallback\navOverLeft.gif" />
+    <Content Include="fallback\navRight.gif" />
+    <Content Include="fallback\subnavBG.png" />
+    <Content Include="fallback\subOverBG.png" />
+    <Content Include="Imagenes\acceso.png" />
+    <Content Include="Imagenes\asignacion_plazas.jpg" />
+    <Content Include="Imagenes\Banderas\semaforo0.gif" />
+    <Content Include="Imagenes\Banderas\semaforo1.gif" />
+    <Content Include="Imagenes\Banderas\semaforo2.gif" />
+    <Content Include="Imagenes\Banderas\semaforo3.gif" />
+    <Content Include="Imagenes\Banderas\semaforo5.gif" />
+    <Content Include="Imagenes\Banderas\semaforo6.png" />
+    <Content Include="Imagenes\BarraAdministracion.png" />
+    <Content Include="Imagenes\BarraInicio.png" />
+    <Content Include="Imagenes\BarraSistemaNacionalDeRegistroDeInformacion.png" />
+    <Content Include="Imagenes\Boton01.png" />
+    <Content Include="Imagenes\Boton02.png" />
+    <Content Include="Imagenes\Boton03.png" />
+    <Content Include="Imagenes\Boton04.png" />
+    <Content Include="Imagenes\Boton05.png" />
+    <Content Include="Imagenes\bot_ingresar.png" />
+    <Content Include="Imagenes\btn01.png" />
+    <Content Include="Imagenes\btn02.png" />
+    <Content Include="Imagenes\btn03.png" />
+    <Content Include="Imagenes\btn04.png" />
+    <Content Include="Imagenes\calendar.PNG" />
+    <Content Include="Imagenes\calendario-hover.png" />
+    <Content Include="Imagenes\calendario.png" />
+    <Content Include="Imagenes\estados_id\1.jpg" />
+    <Content Include="Imagenes\estados_id\10.jpg" />
+    <Content Include="Imagenes\estados_id\11.jpg" />
+    <Content Include="Imagenes\estados_id\12.jpg" />
+    <Content Include="Imagenes\estados_id\13.jpg" />
+    <Content Include="Imagenes\estados_id\14.jpg" />
+    <Content Include="Imagenes\estados_id\15.jpg" />
+    <Content Include="Imagenes\estados_id\16.jpg" />
+    <Content Include="Imagenes\estados_id\17.jpg" />
+    <Content Include="Imagenes\estados_id\18.jpg" />
+    <Content Include="Imagenes\estados_id\19.jpg" />
+    <Content Include="Imagenes\estados_id\2.jpg" />
+    <Content Include="Imagenes\estados_id\20.jpg" />
+    <Content Include="Imagenes\estados_id\21.jpg" />
+    <Content Include="Imagenes\estados_id\22.jpg" />
+    <Content Include="Imagenes\estados_id\23.jpg" />
+    <Content Include="Imagenes\estados_id\24.jpg" />
+    <Content Include="Imagenes\estados_id\25.jpg" />
+    <Content Include="Imagenes\estados_id\26.jpg" />
+    <Content Include="Imagenes\estados_id\27.jpg" />
+    <Content Include="Imagenes\estados_id\28.jpg" />
+    <Content Include="Imagenes\estados_id\29.jpg" />
+    <Content Include="Imagenes\estados_id\3.jpg" />
+    <Content Include="Imagenes\estados_id\30.jpg" />
+    <Content Include="Imagenes\estados_id\31.jpg" />
+    <Content Include="Imagenes\estados_id\32.jpg" />
+    <Content Include="Imagenes\estados_id\4.jpg" />
+    <Content Include="Imagenes\estados_id\5.jpg" />
+    <Content Include="Imagenes\estados_id\6.jpg" />
+    <Content Include="Imagenes\estados_id\7.jpg" />
+    <Content Include="Imagenes\estados_id\8.jpg" />
+    <Content Include="Imagenes\estados_id\9.jpg" />
+    <Content Include="Imagenes\estados_nom\aguascalientes.jpg" />
+    <Content Include="Imagenes\estados_nom\baja_california.jpg" />
+    <Content Include="Imagenes\estados_nom\baja_california_sur.jpg" />
+    <Content Include="Imagenes\estados_nom\campeche.jpg" />
+    <Content Include="Imagenes\estados_nom\chiapas.jpg" />
+    <Content Include="Imagenes\estados_nom\chihuahua.jpg" />
+    <Content Include="Imagenes\estados_nom\coahuila.jpg" />
+    <Content Include="Imagenes\estados_nom\colima.jpg" />
+    <Content Include="Imagenes\estados_nom\df.jpg" />
+    <Content Include="Imagenes\estados_nom\durango.jpg" />
+    <Content Include="Imagenes\estados_nom\estado_mexico.jpg" />
+    <Content Include="Imagenes\estados_nom\guanajuato.jpg" />
+    <Content Include="Imagenes\estados_nom\guerrero.jpg" />
+    <Content Include="Imagenes\estados_nom\hidalgo.jpg" />
+    <Content Include="Imagenes\estados_nom\jalisco.jpg" />
+    <Content Include="Imagenes\estados_nom\michoacan.jpg" />
+    <Content Include="Imagenes\estados_nom\morelos.jpg" />
+    <Content Include="Imagenes\estados_nom\nayarit.jpg" />
+    <Content Include="Imagenes\estados_nom\nuevoleon.jpg" />
+    <Content Include="Imagenes\estados_nom\oaxaca.jpg" />
+    <Content Include="Imagenes\estados_nom\puebla.jpg" />
+    <Content Include="Imagenes\estados_nom\queretaro.jpg" />
+    <Content Include="Imagenes\estados_nom\quintanaro.jpg" />
+    <Content Include="Imagenes\estados_nom\san_luis.jpg" />
+    <Content Include="Imagenes\estados_nom\sinaloa.jpg" />
+    <Content Include="Imagenes\estados_nom\sonora.jpg" />
+    <Content Include="Imagenes\estados_nom\tabasco.jpg" />
+    <Content Include="Imagenes\estados_nom\tamaulipas.jpg" />
+    <Content Include="Imagenes\estados_nom\tlaxcala.jpg" />
+    <Content Include="Imagenes\estados_nom\veracruz.jpg" />
+    <Content Include="Imagenes\estados_nom\yucatan.jpg" />
+    <Content Include="Imagenes\estados_nom\zacatecas.jpg" />
+    <Content Include="Imagenes\FondoDeAgua.png" />
+    <Content Include="Imagenes\FondoDeAgua1b.png" />
+    <Content Include="Imagenes\header2.png" />
+    <Content Include="Imagenes\HeaderPrincipal.jpg" />
+    <Content Include="Imagenes\HeaderPrincipal_MS.jpg" />
+    <Content Include="Imagenes\locales_id\1.jpg" />
+    <Content Include="Imagenes\locales_id\10.jpg" />
+    <Content Include="Imagenes\locales_id\11.jpg" />
+    <Content Include="Imagenes\locales_id\12.jpg" />
+    <Content Include="Imagenes\locales_id\13.jpg" />
+    <Content Include="Imagenes\locales_id\14.jpg" />
+    <Content Include="Imagenes\locales_id\15.jpg" />
+    <Content Include="Imagenes\locales_id\16.jpg" />
+    <Content Include="Imagenes\locales_id\17.jpg" />
+    <Content Include="Imagenes\locales_id\18.jpg" />
+    <Content Include="Imagenes\locales_id\19.jpg" />
+    <Content Include="Imagenes\locales_id\2.jpg" />
+    <Content Include="Imagenes\locales_id\20.jpg" />
+    <Content Include="Imagenes\locales_id\21.jpg" />
+    <Content Include="Imagenes\locales_id\22.jpg" />
+    <Content Include="Imagenes\locales_id\23.jpg" />
+    <Content Include="Imagenes\locales_id\24.jpg" />
+    <Content Include="Imagenes\locales_id\25.jpg" />
+    <Content Include="Imagenes\locales_id\26.jpg" />
+    <Content Include="Imagenes\locales_id\27.jpg" />
+    <Content Include="Imagenes\locales_id\28.jpg" />
+    <Content Include="Imagenes\locales_id\29.jpg" />
+    <Content Include="Imagenes\locales_id\3.jpg" />
+    <Content Include="Imagenes\locales_id\30.jpg" />
+    <Content Include="Imagenes\locales_id\31.jpg" />
+    <Content Include="Imagenes\locales_id\32.jpg" />
+    <Content Include="Imagenes\locales_id\4.jpg" />
+    <Content Include="Imagenes\locales_id\5.jpg" />
+    <Content Include="Imagenes\locales_id\6.jpg" />
+    <Content Include="Imagenes\locales_id\7.jpg" />
+    <Content Include="Imagenes\locales_id\8.jpg" />
+    <Content Include="Imagenes\locales_id\9.jpg" />
+    <Content Include="Imagenes\pie.jpg" />
+    <Content Include="Imagenes\pie.png" />
+    <Content Include="Imagenes\PlecaCapturaDeStatusPorSedeDeAplicacion.png" />
+    <Content Include="Imagenes\PlecaConsultarListaDeSedesDeAplicacion.png" />
+    <Content Include="Imagenes\PlecaMonitoreo.png" />
+    <Content Include="Imagenes\WaitCursor.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="Prelacion\ImpresionFoliosAspirantes.aspx" />
+    <Content Include="Prelacion\ListaPrelacion.aspx" />
+    <Content Include="Reportes\Reporte_SeguimientoPlazas.aspx" />
+    <Content Include="Reportes\Reporte_General.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\btnStyle.css" />
+    <Content Include="Styles\MenuStyle.css" />
+    <Content Include="Styles\SpryTabbedPanels.css" />
+    <Content Include="Styles\SpryTabbedPanels2.css" />
+    <Content Include="Styles\styleGrid.css" />
+    <Content Include="TableroC\Resumen.aspx" />
+    <Content Include="TableroC\SolicitudTransferencia.aspx" />
+    <Content Include="Transferencia\wucRecepcionTransferencia.ascx" />
+    <Content Include="Validaciones\AsignacionCom.js" />
+    <Content Include="Validaciones\Fechas.js" />
+    <Content Include="Validaciones\ListaEspera.js" />
+    <Content Include="Validaciones\Login.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="webDefault.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asignacion\AgregarRegistro.aspx.cs">
+      <DependentUpon>AgregarRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignacion\AgregarRegistro.aspx.designer.cs">
+      <DependentUpon>AgregarRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asignacion\Asignar.aspx.cs">
+      <DependentUpon>Asignar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignacion\Asignar.aspx.designer.cs">
+      <DependentUpon>Asignar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asignacion\AsignarListado.aspx.cs">
+      <DependentUpon>AsignarListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignacion\AsignarListado.aspx.designer.cs">
+      <DependentUpon>AsignarListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asignacion\EditarAsignacion.aspx.cs">
+      <DependentUpon>EditarAsignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignacion\EditarAsignacion.aspx.designer.cs">
+      <DependentUpon>EditarAsignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asignacion\Firmas.aspx.cs">
+      <DependentUpon>Firmas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignacion\Firmas.aspx.designer.cs">
+      <DependentUpon>Firmas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asignacion\PlazaAntecedente.aspx.cs">
+      <DependentUpon>PlazaAntecedente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignacion\PlazaAntecedente.aspx.designer.cs">
+      <DependentUpon>PlazaAntecedente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Cat_TipoNombramiento.aspx.cs">
+      <DependentUpon>Cat_TipoNombramiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Cat_TipoNombramiento.aspx.designer.cs">
+      <DependentUpon>Cat_TipoNombramiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ExtendControls.cs" />
+    <Compile Include="Configuracion\Configuracion.aspx.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Configuracion.aspx.designer.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\wucFiltros.ascx.cs">
+      <DependentUpon>wucFiltros.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\wucFiltros.ascx.designer.cs">
+      <DependentUpon>wucFiltros.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Prelacion\ImpresionFoliosAspirantes.aspx.cs">
+      <DependentUpon>ImpresionFoliosAspirantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prelacion\ImpresionFoliosAspirantes.aspx.designer.cs">
+      <DependentUpon>ImpresionFoliosAspirantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prelacion\ListaPrelacion.aspx.cs">
+      <DependentUpon>ListaPrelacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prelacion\ListaPrelacion.aspx.designer.cs">
+      <DependentUpon>ListaPrelacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\Reporte_SeguimientoPlazas.aspx.cs">
+      <DependentUpon>Reporte_SeguimientoPlazas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_SeguimientoPlazas.aspx.designer.cs">
+      <DependentUpon>Reporte_SeguimientoPlazas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General.aspx.cs">
+      <DependentUpon>Reporte_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General.aspx.designer.cs">
+      <DependentUpon>Reporte_General.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TableroC\Resumen.aspx.cs">
+      <DependentUpon>Resumen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TableroC\Resumen.aspx.designer.cs">
+      <DependentUpon>Resumen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TableroC\SolicitudTransferencia.aspx.cs">
+      <DependentUpon>SolicitudTransferencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TableroC\SolicitudTransferencia.aspx.designer.cs">
+      <DependentUpon>SolicitudTransferencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transferencia\wucRecepcionTransferencia.ascx.cs">
+      <DependentUpon>wucRecepcionTransferencia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transferencia\wucRecepcionTransferencia.ascx.designer.cs">
+      <DependentUpon>wucRecepcionTransferencia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="webDefault.aspx.cs">
+      <DependentUpon>webDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webDefault.aspx.designer.cs">
+      <DependentUpon>webDefault.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{573DD531-1273-4DF5-A34C-55D5DDF38BC5}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>41776</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

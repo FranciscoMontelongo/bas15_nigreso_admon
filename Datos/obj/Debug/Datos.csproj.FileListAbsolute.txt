@@ -1,0 +1,4 @@
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Datos\bin\Debug\Datos.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Datos\bin\Debug\Datos.pdb
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Datos\obj\Debug\Datos.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Datos\obj\Debug\Datos.pdb

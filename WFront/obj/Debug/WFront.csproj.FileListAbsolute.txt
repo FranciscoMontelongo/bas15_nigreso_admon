@@ -1,0 +1,11 @@
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\WFront.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\WFront.pdb
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\ajaxcontroltoolkit.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\Negocio.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\Datos.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\itextsharp.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\Negocio.pdb
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\bin\Datos.pdb
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\obj\Debug\WFront.csprojResolveAssemblyReference.cache
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\obj\Debug\WFront.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\WFront\obj\Debug\WFront.pdb

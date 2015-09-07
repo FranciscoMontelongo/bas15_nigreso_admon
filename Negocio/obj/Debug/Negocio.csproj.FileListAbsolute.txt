@@ -1,0 +1,8 @@
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\bin\Debug\Negocio.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\bin\Debug\Negocio.pdb
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\bin\Debug\Datos.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\bin\Debug\Datos.pdb
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\obj\Debug\Negocio.dll
+C:\ILCE\Proyectos CONAPD 2015\Basica Promocion15\AsignacionPlazasBasica15 - Directores\Negocio\obj\Debug\Negocio.pdb
